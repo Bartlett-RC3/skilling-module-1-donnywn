@@ -1,61 +1,51 @@
-﻿//Libraries
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-//Where code lives
-public class Session1 : MonoBehaviour {
+
+public class Session1 : MonoBehaviour
+{
 
 
-    // 1.Variables
-    //Scope -- Type -- Name -- Value
+    public int ningwang1int = 57;
+    public float ningwang1float = 5.7f;
+    public string ningwang1string = "my dog's name is rhino";
 
-    //Numbers
-    public int myFirstIntegerNumber = 101; //make sure you end with ;
-    float myFirstFloatNumber = 1.75f;
+    public int[] ningwangintarray = { 1, 3, 5, 7, 9 };
+    public List<string> ningwanglist = new List<string>() { "rhino", "hippo","elephant"};
+    public Dictionary<string, string> ningwangdictionary = new Dictionary<string, string>();
+  
 
-    //Text
-    public string myFirstString = "My text is somewhere.";
 
-    //Logical variable
-    bool myFirstBoolean = true;
 
-    // Data structures
-    // Scope -- Type -- Values
-
-    // 3.a.Arrays
-    public int[] myintegrerArray = { 1, 2, 3, 4, 5 };
-    public float[] myFloatArray = new float[5];
-
-    // 3.b.Lists
-    public List<int> myIntegerList = new List<int>();
-
-    // 2.Fuctions
-    //Scope -- Type -- Variables -- Body (Instructions)
-
-    // Use this for initialization
-    void Start () {
-        Debug.Log("Addtion of 5 and 3 is:" + AddtionOfNumbers(5, 3));
-        myFloatArray[2] = 3.2f;
-        myFloatArray[3] = 5.6f;
-        myFloatArray[4] = 9.2f;
-
-        myIntegerList.Add(1);
-        myIntegerList.Add(2);
-        myIntegerList.Add(3);
-
-        myIntegerList.Remove(0);
-    }
-	
-    int AddtionOfNumbers(int number1, int number2)
+    void Start()
     {
-        int addtionaResult = number1 + number2;
-        return addtionaResult;
+        print("Lucky number" + " "+"is"+" "+ ningwang1int);  
+        print("Lucky float number" + " " + "is" + " " + ningwang1float);
+        print(ningwang1string);
+    
+        print(ningwangintarray[2] + ningwangintarray[4]);
+        print(ningwangintarray.Length);
+        print("favorite animal is" + " " + ningwanglist[0]);
+        print("number of array is" + ningwangintarray.Length);
+
+        ningwanglist.Add("Ape");
+        ningwanglist.Add("lion");
+
+        Debug.Log(ningwanglist.Count);
+
+
+        ningwangdictionary.Add("gtr","bmw");
+        ningwangdictionary.Add("benz", "audi");
+
+        print("nice car is"+ " " + ningwangdictionary);
+
+    
     }
-	// Update is called once per frame
-	void Update () {
-        Debug.Log("Hello world");
-		
-	}
+
+
 }
+
+
+
