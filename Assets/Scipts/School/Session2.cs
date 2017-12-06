@@ -16,6 +16,9 @@ public class Session2 : MonoBehaviour
     List<int> evenNumbers = new List<int>();
     int[] evenNumbersSmart = new int[10];
 
+    //List to store humans
+    //List<Human> rc3Tutors = new List<Human>();
+
     // Use this for initialization
     void Start()
     {
